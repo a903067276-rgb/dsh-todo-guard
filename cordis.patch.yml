@@ -1,0 +1,8 @@
+# dsh-todo-guard：todo 完成校验 + 可靠面板（0.1.0 开发中）
+# bundle 安装：dsh plugin --profile <名> add "github:a903067276-rgb/dsh-todo-guard#main"
+# 功能：① 勾完成时校验证据（证据：路径）存在性，假证据拦截 ② 顶替官方面板，
+#      重启后仍显示（官方 bug 绕过）③ 无证据完成项面板黄标"未验证"
+# 生效方式：重启 dsh web
+- insert:
+    - id: todo-guard
+      name: 'dsh-todo-guard'
