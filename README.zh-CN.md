@@ -8,6 +8,10 @@
 
 *非官方项目：社区成员独立开发维护，非 DeepSeek 官方产品。*
 
+## 截图
+
+![dsh-todo-guard 任务面板](assets/todo-panel.png)
+
 ## 功能
 
 - **重启不丢显示**——顶替官方 todo 面板（`conversation.input.dock` 格子，`priority: -1` shadow）；重启 dsh 后重新打开会话，todo 列表照常显示
