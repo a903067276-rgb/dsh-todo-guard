@@ -12,6 +12,10 @@ A **reliable todo panel** plugin for [DeepSeek Harness](https://github.com/deeps
 
 ![dsh-todo-guard panel](assets/todo-panel.png)
 
+## Requirements
+
+- DSH web 0.1.0-rc.6 ONLY (frozen compat branch, no longer maintained; use >= 0.1.0-rc.7 for the maintained version)
+
 ## Features
 
 - **Restart-proof panel** — replaces the official todo strip (`conversation.input.dock` cell, shadowed at `priority: -1`); after a dsh restart, reopening the session shows the todo list again

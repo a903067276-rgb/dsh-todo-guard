@@ -12,6 +12,10 @@
 
 ![dsh-todo-guard 任务面板](assets/todo-panel.png)
 
+## 运行要求
+
+- DSH web（仅 0.1.0-rc.6，冻结兼容分支，不再维护；请使用 ≥ 0.1.0-rc.7 的维护版本）
+
 ## 功能
 
 - **重启不丢显示**——顶替官方 todo 面板（`conversation.input.dock` 格子，`priority: -1` shadow）；重启 dsh 后重新打开会话，todo 列表照常显示
