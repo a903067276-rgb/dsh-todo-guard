@@ -14,8 +14,8 @@
 
 ## 运行要求
 
-- DSH web（≥ 0.1.0-rc.7）（`npx @deepseek-ai/dsh web` 启动）
-- rc.6 用户：请安装冻结 tag：`dsh plugin add github:a903067276-rgb/dsh-todo-guard#rc6-compat`（不再维护，强烈建议升级 rc.7+）
+- DSH web（≥ 0.1.0-rc.6）（`npx @deepseek-ai/dsh web` 启动）
+- **版本兼容**：0.1.0-rc.6 及以上（含 0.1.1-rc.1/rc.2）——直接安装 `main` 即可；设置卡片通过双字段注册同时满足 rc.6（id 契约）与 rc.7+（key 契约）；`rc6-compat` 冻结标签已退役（仅作历史标签保留）。
 
 ## 功能
 
