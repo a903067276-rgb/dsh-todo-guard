@@ -23,6 +23,7 @@ A **reliable todo panel** plugin for [DeepSeek Harness](https://github.com/deeps
 ## Features
 
 - **Restart-proof panel** — replaces the official todo strip (`conversation.input.dock` cell, shadowed at `priority: -1`); after a dsh restart, reopening the session shows the todo list again
+- **Persists across turns and disconnects** — the official `todos` projection is reset to `null` at the start of every turn (`turn/start`), so the panel disappears and stays blank after a resume (official design semantics); this plugin registers a `todo-guard/todos` mirror projection that only follows `todo/write` and never clears — the panel carries the last todo list across turns and after reopening a session
 - **Completion verification (three states)** — when the agent marks a todo `completed`, evidence is checked automatically:
   - `（证据：路径）` and the path exists → ✅ green check (verified)
   - `（证据：路径）` but the path does not exist → 🚫 blocked, the agent gets a clear error and must fix it
@@ -47,7 +48,7 @@ dsh plugin --profile web add "github:a903067276-rgb/dsh-todo-guard#main"
 ## How it works (why it survives restarts)
 
 - **Data**: todos live in the session event stream (official `todo/write`, last-wins whole-list), persisted on disk — the official panel just fails to re-render them after a restart
-- **Panel**: official `useProjection('todos')` projection + same-id slot shadowing (`priority: -1`, lowest renders) — official interfaces only
+- **Panel**: the plugin-registered `todo-guard/todos` projection (a "last valid value" mirror of the official `todos`: it follows `todo/write` and is never cleared by `turn/start`) + same-id slot shadowing (`priority: -1`, lowest renders) — official interfaces only; the mirror projection is persisted by the official projection cache and served back on session restore
 - **Verification**: official `tools/pre-execute` waterfall intercepts `todo_write` before it commits; failed evidence denies the write with a readable reason
 
 ## Notes

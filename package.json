@@ -1,6 +1,6 @@
 {
   "name": "dsh-todo-guard",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Reliable todo panel for DSH: survives restarts, verifies completion evidence",
   "type": "module",
   "main": "lib/index.js",
@@ -49,5 +49,7 @@
     "@deepseek-ai/dsh-tools": "^0.1.0-rc.7 || ^0.1.1-rc.1",
     "@deepseek-ai/schemastery": "^3.18.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "zod": "^4.4.3"
+  }
 }

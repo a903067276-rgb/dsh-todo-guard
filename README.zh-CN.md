@@ -23,6 +23,7 @@
 ## 功能
 
 - **重启不丢显示**——顶替官方 todo 面板（`conversation.input.dock` 格子，`priority: -1` shadow）；重启 dsh 后重新打开会话，todo 列表照常显示
+- **跨 turn / 断会话延续**——官方 todos 投影在每轮对话开始（`turn/start`）时被清空为 null（面板随之消失、恢复会话后空白，官方设计语义）；本插件注册 `todo-guard/todos` 镜像投影，只跟随 `todo/write` 更新、不清空——面板跨 turn 延续显示、断会话/重新打开后仍带出上次任务列表
 - **完成校验三态**——agent 勾"完成"时自动检查证据：
   - `（证据：路径）` 且文件存在 → ✅ 绿勾（已验证）
   - `（证据：路径）` 但查无此物 → 🚫 拦截，agent 收到明确报错并需修正
@@ -47,7 +48,7 @@ dsh plugin --profile web add "github:a903067276-rgb/dsh-todo-guard#main"
 ## 工作原理（为什么重启后能显示）
 
 - **数据**：todo 存于会话事件流（官方 `todo/write`，last-wins 全量），dsh 重启后仍在磁盘——官方面板只是重启后没重新渲染
-- **面板**：官方 `useProjection('todos')` 投影 + 槽位同 id 顶替（`priority: -1`，最低者渲染）——纯官方接口
+- **面板**：本插件注册的 `todo-guard/todos` 投影（官方 todos 的"最后有效值"镜像，跟随 `todo/write` 更新、不被 `turn/start` 清空）+ 槽位同 id 顶替（`priority: -1`，最低者渲染）——纯官方接口；镜像投影随官方投影缓存一并持久化，恢复会话时一并带出
 - **校验**：官方 `tools/pre-execute` 瀑布在写入前拦截 `todo_write`；证据不过则拒绝写入并给出可读原因
 
 ## 说明
