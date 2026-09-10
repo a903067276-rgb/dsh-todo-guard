@@ -16,7 +16,8 @@
 
 - DSH web（≥ 0.1.1-rc.1，推荐跟随最新版）（`npx @deepseek-ai/dsh web` 启动）
 - **版本兼容（尽力而为，不保证每个 DSH 版本）**：
-  - DSH 0.1.1-rc.1 及以上（含 0.1.1-rc.2 / 0.1.2）：装 `main`（默认）。契约点：镜像投影 `stateSchema+wire`（0.1.1-rc.1+）、复查区多 dock 共存（`conversation.input.dock` 多 id）、设置卡片双字段 `key`+`id`（rc.6/rc.7+ 通吃）、`tools/post-execute` 提示（不存在该钩子的旧版自动降级为仅面板标注）
+  - DSH 0.1.1-rc.1 及以上（含 0.1.1-rc.2 / 0.1.2）：装 `main`（默认）。
+  - **DSH 0.1.5-rc.1：加载实测通过**——镜像投影契约（`stateSchema`+`wire`）在 0.1.5 未变、`tools/post-execute` 钩子仍在；复查区 UI 未逐项肉眼复测。官方 `dsh-tool-todo` 至今没有证据/校验概念，本插件价值独立。契约点：镜像投影 `stateSchema+wire`（0.1.1-rc.1+）、复查区多 dock 共存（`conversation.input.dock` 多 id）、设置卡片双字段 `key`+`id`（rc.6/rc.7+ 通吃）、`tools/post-execute` 提示（不存在该钩子的旧版自动降级为仅面板标注）
   - DSH 0.1.0-rc.7 / rc.8：**投影契约不同（0.1.1-rc.1 前旧式），复查区数据不保证**；回退 `v0.1.6`（`dsh plugin add github:a903067276-rgb/dsh-todo-guard#v0.1.6`）
   - DSH 0.1.0-rc.6：冻结 `rc6-compat`（不再维护）
 - **维护策略**：本插件将持续跟随 DSH 最新版本演进；对旧版 DSH 的兼容仅是尽力而为、不保证长期有效。

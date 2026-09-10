@@ -16,7 +16,8 @@ A **todo review plugin** for [DeepSeek Harness](https://github.com/deepseek-ai/d
 
 - DSH web (≥ 0.1.1-rc.1, latest recommended) (`npx @deepseek-ai/dsh web`)
 - **Version compatibility (best-effort, not guaranteed for every DSH version)**:
-  - DSH 0.1.1-rc.1+ (incl. 0.1.1-rc.2 / 0.1.2): install `main` (default). Contract points: mirror projection `stateSchema+wire` (0.1.1-rc.1+), multi-id dock coexistence (`conversation.input.dock`), settings card dual field `key`+`id` (satisfies rc.6 & rc.7+), `tools/post-execute` nudges (degrade silently on hosts without this hook — panel annotation only)
+  - DSH 0.1.1-rc.1+ (incl. 0.1.1-rc.2 / 0.1.2): install `main` (default).
+  - **DSH 0.1.5-rc.1: load-verified** — the mirror-projection contract (`stateSchema`+`wire`) is unchanged in 0.1.5 and the `tools/post-execute` hook still exists; the review dock UI was not eyeballed item by item. The official `dsh-tool-todo` still has no evidence/verification concept, so this plugin stays independently useful. Contract points: mirror projection `stateSchema+wire` (0.1.1-rc.1+), multi-id dock coexistence (`conversation.input.dock`), settings card dual field `key`+`id` (satisfies rc.6 & rc.7+), `tools/post-execute` nudges (degrade silently on hosts without this hook — panel annotation only)
   - DSH 0.1.0-rc.7 / rc.8: **old projection contract (pre-0.1.1-rc.1) — review dock data not guaranteed**; fallback `v0.1.6` (`dsh plugin add github:a903067276-rgb/dsh-todo-guard#v0.1.6`)
   - DSH 0.1.0-rc.6: frozen `rc6-compat` (no longer maintained)
 - **Maintenance policy**: this plugin tracks the latest DSH; legacy compatibility is best-effort only.
