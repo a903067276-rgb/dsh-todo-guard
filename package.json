@@ -1,6 +1,6 @@
 {
   "name": "dsh-todo-guard",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Reliable todo panel for DSH: survives restarts, verifies completion evidence",
   "type": "module",
   "main": "lib/index.js",
