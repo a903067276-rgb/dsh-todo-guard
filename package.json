@@ -1,6 +1,6 @@
 {
   "name": "dsh-todo-guard",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Reliable todo panel for DSH: review dock survives restarts, verifies completion evidence submitted through its own tool (official todo panel stays clean)",
   "icon": "assets/icon.svg",
   "type": "module",
