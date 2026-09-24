@@ -2,18 +2,22 @@
   "name": "dsh-todo-guard",
   "version": "2.2.0",
   "description": "Reliable todo panel for DSH: review dock survives restarts, verifies completion evidence submitted through its own tool (official todo panel stays clean)",
+  "icon": "assets/icon.svg",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js",
     "./client": "./lib/client.js",
     "./cordis.patch.yml": "./cordis.patch.yml",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*": "./locale/*"
   },
   "files": [
     "lib",
     "docs",
-    "cordis.patch.yml"
+    "cordis.patch.yml",
+    "assets",
+    "locale"
   ],
   "keywords": [
     "dsh",

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-label="dsh-todo-guard">
+  <rect x="1" y="1" width="22" height="22" rx="5.5" fill="#059669"/>
+  <g fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5.9 8.2 7.55 9.95 10.1 6.6"/>
+    <path d="M5.9 12 7.55 13.75 10.1 10.4"/>
+    <path d="M5.9 15.8 7.55 17.55 10.1 14.2"/>
+    <path d="M13.1 8.2h5"/>
+    <path d="M13.1 12h5"/>
+    <path d="M13.1 15.8h5"/>
+  </g>
+</svg>

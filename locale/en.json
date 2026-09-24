@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Todo Guard",
+    "description": "Review dock that keeps unfinished todos across restarts and verifies completion evidence."
+  }
+}
