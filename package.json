@@ -1,6 +1,6 @@
 {
   "name": "dsh-todo-guard",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "Reliable todo panel for DSH: review dock survives restarts, verifies completion evidence submitted through its own tool (official todo panel stays clean)",
   "type": "module",
   "main": "lib/index.js",
@@ -43,9 +43,10 @@
     }
   },
   "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.1.7-rc.1 <0.2.0",
     "@deepseek-ai/cordis": "^4.0.1-rc.1",
     "@deepseek-ai/dsh-tools": "^0.1.0-rc.7 || ^0.1.1-rc.1 || ^0.1.2-alpha.2 || ^0.1.5-rc.1",
-    "@deepseek-ai/schemastery": "^3.18.1"
+    "@deepseek-ai/schemastery": "^3.18.3"
   },
   "dependencies": {
     "zod": "^4.4.3"
