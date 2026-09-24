@@ -20,6 +20,8 @@
   - **DSH 0.1.5-rc.2：v2.1 实测通过**——`tools.register` 工具注册、镜像投影契约（`stateSchema`+`wire`）、`tools/post-execute` 钩子、会话日志 `tool/call` 事件读取均正常。契约点：镜像投影 `stateSchema+wire`（0.1.1-rc.1+）、复查区多 dock 共存（`conversation.input.dock` 多 id）、设置卡片双字段 `key`+`id`（rc.6/rc.7+ 通吃）、工具注册走 `@deepseek-ai/dsh-tools` 的 `defineTool`（peer 依赖，由宿主提供）、`tools/post-execute` 提示（不存在该钩子的旧版自动降级为仅面板标注）
   - DSH 0.1.0-rc.7 / rc.8：**投影契约不同（0.1.1-rc.1 前旧式），复查区数据不保证**；回退 `v0.1.6`（`dsh plugin add github:a903067276-rgb/dsh-todo-guard#v0.1.6`）
   - DSH 0.1.0-rc.6：冻结 `rc6-compat`（不再维护）
+  - ✅ **DSH 0.1.7 及以后——装本版（`v2.2.0`）**：它声明了 `peerDependencies: {"@deepseek-ai/dsh": ">=0.1.7-rc.1 <0.2.0"}`，宿主不匹配会明确拒绝加载并说明原因，不再静默出错。配置迁到 0.1.7 的插件 `Config`（`.volatile()` 字段可即时生效），改完不用重启。
+  - ⚠️ **DSH 0.1.5 及更早——请装上一版 tag `v2.1.2`**：那条线保持原行为，不含任何 0.1.7 专用 API。
 - **维护策略**：本插件将持续跟随 DSH 最新版本演进；对旧版 DSH 的兼容仅是尽力而为、不保证长期有效。
 
 ## 功能

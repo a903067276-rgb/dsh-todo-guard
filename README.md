@@ -20,6 +20,8 @@ A **todo review plugin** for [DeepSeek Harness](https://github.com/deepseek-ai/d
   - **DSH 0.1.5-rc.2: v2.1 verified** — `tools.register`, the mirror-projection contract (`stateSchema`+`wire`), the `tools/post-execute` hook and reading `tool/call` events from the session log all work. Contract points: mirror projection `stateSchema+wire` (0.1.1-rc.1+), multi-id dock coexistence (`conversation.input.dock`), settings card dual field `key`+`id` (satisfies rc.6 & rc.7+), tool registration via `defineTool` from `@deepseek-ai/dsh-tools` (peer dependency, provided by the host), `tools/post-execute` nudges (degrade silently on hosts without this hook — panel annotation only)
   - DSH 0.1.0-rc.7 / rc.8: **old projection contract (pre-0.1.1-rc.1) — review dock data not guaranteed**; fallback `v0.1.6` (`dsh plugin add github:a903067276-rgb/dsh-todo-guard#v0.1.6`)
   - DSH 0.1.0-rc.6: frozen `rc6-compat` (no longer maintained)
+  - ✅ **DSH 0.1.7 and later — use this release (`v2.2.0`)**: it declares `peerDependencies: {"@deepseek-ai/dsh": ">=0.1.7-rc.1 <0.2.0"}`, so a mismatched host refuses to load it with an explicit reason instead of failing quietly. Settings move to the 0.1.7 model (plugin `Config`, live-editable `.volatile()` fields), so changes apply without a restart.
+  - ⚠️ **DSH 0.1.5 and older — install the previous tag `v2.1.2`**: that line keeps the old behavior and uses no 0.1.7-only API.
 - **Maintenance policy**: this plugin tracks the latest DSH; legacy compatibility is best-effort only.
 
 ## Features
