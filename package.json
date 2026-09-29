@@ -1,9 +1,12 @@
 {
   "name": "dsh-todo-guard",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "description": "Reliable todo panel for DSH: review dock survives restarts, verifies completion evidence submitted through its own tool (official todo panel stays clean)",
   "icon": "assets/icon.svg",
   "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js",
