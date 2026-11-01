@@ -8,6 +8,15 @@ A **todo review plugin** for [DeepSeek Harness](https://github.com/deepseek-ai/d
 
 *Unofficial: a community project, not a DeepSeek product.*
 
+> ## ⚠️ Retired (2026-11-01)
+>
+> **The official todo panel now covers the main use case**: DSH ships `@deepseek-ai/dsh-tool-todo` with the todo list, checkboxes, and the composer todo strip. In the author's actual usage the review dock / evidence area was rarely used (only 7 of 33 sessions and 12 `todo_evidence` calls in the last 14 days), so it was judged to add little day-to-day value. This plugin is **no longer maintained**.
+>
+> - **Last version: `v2.5.2`**; no further fixes or compatibility updates.
+> - Uninstalled from the author's three profiles (desktop / web / test). You can still install it, but compatibility risk is yours.
+> - Official replacement: use the built-in todo panel. The evidence review / checkpoint resume workflow was this plugin's own opinion; the official todo has no counterpart, and does not need one.
+> - Thanks for using it.
+
 ## Screenshot
 
 ![dsh-todo-guard review dock](assets/todo-panel.png)
