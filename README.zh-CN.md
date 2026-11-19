@@ -2,7 +2,15 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
+> ⏸️ **Stopped maintenance** — security fixes only, no new features.
+>
+> ⏸️ **已停止维护** — 仅修安全问题，不再增加新功能。
+
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+
+> ⚠️ **Name collision**: the npm package `dsh-todo-guard` (0.1.0, by wxlei2004) is a **different, unrelated plugin**. This one ships from GitHub only.
+>
+> ⚠️ **同名包提示**：npm 上的 `dsh-todo-guard`（0.1.0，作者 wxlei2004）**是另一个插件，不是本项目**。本项目只从 GitHub 安装。
 
 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（`dsh`）web 的 **todo 复查插件**：官方 todo 面板原样保留（条目文字只写任务本身，插件的东西一概不塞进去），在其下方外加「复查区」——未完成任务跨轮/重启持续显示（断点续传），完成项的证据由 agent 用插件自己的 `todo_evidence` 工具交到复查区并自动核验（已验证 / 证据异常 / 已交证据 / 未交证据），没交证据**不阻塞勾选**、只标注并留给你**一键确认**（折叠着也能点）。
 

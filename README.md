@@ -2,7 +2,15 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
+> ⏸️ **Stopped maintenance** — security fixes only, no new features.
+>
+> ⏸️ **已停止维护** — 仅修安全问题，不再增加新功能。
+
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+
+> ⚠️ **Name collision**: the npm package `dsh-todo-guard` (0.1.0, by wxlei2004) is a **different, unrelated plugin**. This one ships from GitHub only.
+>
+> ⚠️ **同名包提示**：npm 上的 `dsh-todo-guard`（0.1.0，作者 wxlei2004）**是另一个插件，不是本项目**。本项目只从 GitHub 安装。
 
 A **todo review plugin** for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`) web: the official todo panel stays untouched (item text carries nothing but the task itself), and a **review dock** hangs right below it — unfinished tasks persist across turns/restarts (checkpoint resume), completed items get evidence submitted through the plugin's own `todo_evidence` tool and verified automatically (verified / evidence-missing / text-only / unsubmitted), and missing evidence **never blocks the check**: it is only annotated and left for your **one-click confirm** (works while the dock is collapsed).
 
